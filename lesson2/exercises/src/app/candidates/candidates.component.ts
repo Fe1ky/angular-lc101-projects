@@ -15,6 +15,7 @@ export class CandidatesComponent implements OnInit {
     {name: 'Jackalope', data: {age: 45, mass: '33 kg', sidekick: 'Chris'}, image: 'assets/images/Chris.png'},
     {name: 'Champ', data: {age: 9, mass: '36 kg', sidekick: 'Carly'}, image: 'assets/images/Carly.png'}
   ];
+    
 
   crew = [];
 
@@ -24,7 +25,11 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+   addToCrew(crewMember){
+    if(this.crew.includes(crewMember.name)==false){
+      this.crew.push(crewMember.name);
+    }
+}
 
   // BONUS: Code the changeMissionName function here:
 
